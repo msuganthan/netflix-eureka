@@ -9,7 +9,5 @@ public class CustomerServiceFeignClientFallback implements CustomerServiceFeignC
 	public Customer getCustomer(int id) {
 		return new Customer(12, "Suganthan", "Madhavan");
 	}
-
-	
 	
 }

@@ -1,4 +1,4 @@
-package org.sugathan.client;
+package org.sugathan.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,7 +18,7 @@ public class CustomerFeignController {
 	@Autowired
 	private CustomerServiceFeignClient customerServiceFeignClient;
 	
-	@RequestMapping(value="/customer-client-feign/{id}", method = RequestMethod.GET, produces = "applicaiton/json")
+	@RequestMapping(value="/customer-client-feign/{id}", method = RequestMethod.GET, produces = "application/json")
 	public MessageWrapper<Customer> getCustomer(@PathVariable int id) {
 		logger.debug("Reading customer using feign client with ID " + id);
 		Customer customer = customerServiceFeignClient.getCustomer(id);

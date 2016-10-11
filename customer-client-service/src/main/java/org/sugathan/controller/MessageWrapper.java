@@ -1,4 +1,4 @@
-package org.sugathan.client;
+package org.sugathan.controller;
 
 public class MessageWrapper<T> {
 
